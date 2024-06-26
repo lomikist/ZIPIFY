@@ -1,21 +1,26 @@
+
 #include <iostream>
-#include <vector>
 #include <fstream>
+#include <unordered_map>
 
-template <class T>
-using vector = std::vector<T>;
+int main() {
+    std::ifstream file("unprintable.txt");
+    if (!file) {
+        std::cerr << "Unable to open file\n";
+        return 1;
+    }
 
-using string = std::string;
-using std::cout;
-using std::cin;
-using std::ofstream;
+    std::unordered_map<char, int> charCount;
+    char ch;
 
-int main(int argc, char ** argv)
-{
-    int i = 0;
-    cout << argv[1];
-    ofstream outfile(argv[1], ofstream::binary);
-    string text = "hello";
-    outfile.write(text.c_str(), text.size());
-    outfile.close();
+    while (file.get(ch)) {
+        ++charCount[ch];
+    }
+
+    file.close();
+
+    for (const auto& pair : charCount) {
+        std::cout << pair.first << ": " << pair.second << '\n';
+    }
+    return 0;
 }
