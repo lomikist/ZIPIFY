@@ -71,14 +71,27 @@ Huffman_queue generateTree(const unordered_map<char, int>& char_freq)
 
 void generateCode(unordered_map<char, std::string>& codes, const node& t_node, int path)
 {
-    if(t_node._left)
-        generateCode(codes, *t_node._left, path * 10 + 1);
-    else
-        codes[t_node._value] = std::to_string(path).erase(0, 1);
-    if(t_node._right)
-        generateCode(codes, *t_node._right, path * 10);
-    else
-        codes[t_node._value] = std::to_string(path).erase(0, 1);
+    if (codes.size())
+    {
+        if(t_node._left)
+            generateCode(codes, *t_node._left, path * 10);
+        else
+            codes[t_node._value] = std::to_string(path).erase(0, 1);
+        if(t_node._right)
+            generateCode(codes, *t_node._right, path * 10 + 1);
+        else
+            codes[t_node._value] = std::to_string(path).erase(0, 1);
+    }else//TODO please check this..... now i think its working but it pretty shit.
+    {
+        if(t_node._left)
+            generateCode(codes, *t_node._left, path * 10);
+        else
+            codes[t_node._value] = std::to_string(path * 10 + 1).erase(0, 1);
+        if(t_node._right)
+            generateCode(codes, *t_node._right, path * 10 + 1);
+        else
+            codes[t_node._value] = std::to_string(path * 10 + 1).erase(0, 1);
+    }
 }
 
 void createBinaryFile(unordered_map<char, std::string> codes, const std::string& in_file_name, const std::string& out_file_name)
