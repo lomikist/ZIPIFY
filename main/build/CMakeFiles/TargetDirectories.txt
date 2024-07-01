@@ -1,0 +1,5 @@
+/home/weasle/repos/ZIPIFY/main/build/CMakeFiles/MyExecutable.dir
+/home/weasle/repos/ZIPIFY/main/build/CMakeFiles/debug.dir
+/home/weasle/repos/ZIPIFY/main/build/CMakeFiles/release.dir
+/home/weasle/repos/ZIPIFY/main/build/CMakeFiles/edit_cache.dir
+/home/weasle/repos/ZIPIFY/main/build/CMakeFiles/rebuild_cache.dir
