@@ -651,15 +651,14 @@ CMakeFiles/MyExecutable.dir/src/bitWriter.cpp.o: ../src/bitWriter.cpp \
   /usr/include/c++/11/bits/deque.tcc \
   /usr/include/c++/11/bits/stl_queue.h \
   /usr/include/c++/11/bitset \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/stdlib.h \
   ../inc/fileData.hpp \
   ../inc/bitWriter.hpp \
-  ../inc/fileData.hpp \
   ../inc/zipify.hpp \
   ../inc/unzipify.hpp \
-  ../inc/bitWriter.hpp \
-  /usr/include/c++/11/sstream \
-  /usr/include/c++/11/bits/sstream.tcc
+  ../inc/bitWriter.hpp
 
 CMakeFiles/MyExecutable.dir/src/fileData.cpp.o: ../src/fileData.cpp \
   /usr/include/stdc-predef.h \
@@ -1311,10 +1310,11 @@ CMakeFiles/MyExecutable.dir/src/fileData.cpp.o: ../src/fileData.cpp \
   /usr/include/c++/11/bits/deque.tcc \
   /usr/include/c++/11/bits/stl_queue.h \
   /usr/include/c++/11/bitset \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/stdlib.h \
   ../inc/fileData.hpp \
   ../inc/bitWriter.hpp \
-  ../inc/fileData.hpp \
   ../inc/zipify.hpp \
   ../inc/unzipify.hpp
 
@@ -1968,10 +1968,11 @@ CMakeFiles/MyExecutable.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/deque.tcc \
   /usr/include/c++/11/bits/stl_queue.h \
   /usr/include/c++/11/bitset \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/stdlib.h \
   ../inc/fileData.hpp \
   ../inc/bitWriter.hpp \
-  ../inc/fileData.hpp \
   ../inc/zipify.hpp \
   ../inc/unzipify.hpp
 
@@ -2625,10 +2626,11 @@ CMakeFiles/MyExecutable.dir/src/unzipify.cpp.o: ../src/unzipify.cpp \
   /usr/include/c++/11/bits/deque.tcc \
   /usr/include/c++/11/bits/stl_queue.h \
   /usr/include/c++/11/bitset \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/stdlib.h \
   ../inc/fileData.hpp \
   ../inc/bitWriter.hpp \
-  ../inc/fileData.hpp \
   ../inc/zipify.hpp \
   ../inc/unzipify.hpp
 
@@ -3282,10 +3284,11 @@ CMakeFiles/MyExecutable.dir/src/zipify.cpp.o: ../src/zipify.cpp \
   /usr/include/c++/11/bits/deque.tcc \
   /usr/include/c++/11/bits/stl_queue.h \
   /usr/include/c++/11/bitset \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/stdlib.h \
   ../inc/fileData.hpp \
   ../inc/bitWriter.hpp \
-  ../inc/fileData.hpp \
   ../inc/zipify.hpp \
   ../inc/unzipify.hpp
 
@@ -3296,8 +3299,6 @@ CMakeFiles/MyExecutable.dir/src/zipify.cpp.o: ../src/zipify.cpp \
 
 ../src/fileData.cpp:
 
-/usr/include/c++/11/sstream:
-
 ../inc/zipify.hpp:
 
 ../inc/bitWriter.hpp:
@@ -3305,6 +3306,8 @@ CMakeFiles/MyExecutable.dir/src/zipify.cpp.o: ../src/zipify.cpp \
 ../inc/fileData.hpp:
 
 /usr/include/c++/11/stdlib.h:
+
+/usr/include/c++/11/sstream:
 
 /usr/include/c++/11/bitset:
 

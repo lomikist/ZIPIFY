@@ -581,9 +581,9 @@ CMakeFiles/MyExecutable.dir/src/unzipify.cpp.o: \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/queue \
  /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
  /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_queue.h \
- /usr/include/c++/11/bitset /usr/include/c++/11/stdlib.h \
+ /usr/include/c++/11/bitset /usr/include/c++/11/sstream \
+ /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/stdlib.h \
  /home/weasle/repos/ZIPIFY/main/src/../inc/fileData.hpp \
- /home/weasle/repos/ZIPIFY/main/src/../inc/../inc/bitWriter.hpp \
- /home/weasle/repos/ZIPIFY/main/src/../inc/../inc/fileData.hpp \
- /home/weasle/repos/ZIPIFY/main/src/../inc/../inc/zipify.hpp \
- /home/weasle/repos/ZIPIFY/main/src/../inc/../inc/unzipify.hpp
+ /home/weasle/repos/ZIPIFY/main/src/../inc/bitWriter.hpp \
+ /home/weasle/repos/ZIPIFY/main/src/../inc/zipify.hpp \
+ /home/weasle/repos/ZIPIFY/main/src/../inc/unzipify.hpp
