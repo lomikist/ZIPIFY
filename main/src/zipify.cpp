@@ -53,7 +53,7 @@ void Zipify::createBinaryFile()
     // FileData file_data(_codes, _in_file_name);//for writing one obj instead of 2.
     BitWriter data_writer(_out_file_name, _codes, _in_file_name);
     
-    _in_file.open(_in_file_name, std::ios::in);
+    _in_file.open(_in_file_name, std::ios::in | std::ios::binary);
     if (!_in_file.is_open())
         throw std::runtime_error("can't open the file for reading 58 line zipify.");
     
@@ -71,7 +71,7 @@ Zipify::Zipify(const std::string &in_file_name, const std::string &out_file_name
                     _in_file_name(in_file_name),
                     _out_file_name(out_file_name)
 {
-    _in_file.open(_in_file_name, std::ios::in);
+    _in_file.open(_in_file_name, std::ios::in | std::ios::binary);
     if (!_in_file.is_open())
         throw(std::runtime_error("can't open the file for reading zipify"));
 }

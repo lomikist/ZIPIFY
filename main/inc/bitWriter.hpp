@@ -14,9 +14,8 @@ public:
     void nameCodeWrite();
     void nameCodeRead();
     void generateOutputFile();
-    void writeDataToOutput(const std::string &data);
-
-    std::string readToStr();
+    void writeDataToOutput(const std::string & data); 
+    std::string  readToStr();
 private:
     std::unordered_map<int, char> _codes;
     FileData        _file_data;

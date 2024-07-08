@@ -12,6 +12,14 @@ BitWriter::BitWriter(const std::string& out_file_name, const std::unordered_map<
         throw std::runtime_error("can't open output file for creating a zip.");
     nameCodeWrite();
 }
+std::string binaryToString(const std::vector<uint8_t>& data) {
+    std::string result;
+    for (uint8_t byte : data) {
+        std::bitset<8> bits(byte);
+        result += bits.to_string();
+    }
+    return result;
+}
 
 BitWriter::BitWriter(const std::string &in_file_name)
 {
@@ -20,8 +28,8 @@ BitWriter::BitWriter(const std::string &in_file_name)
         throw std::runtime_error("can't open output file for creating a zip.");
     nameCodeRead();
     generateOutputFile();
-    std::string a = readToStr();
-    writeDataToOutput(a);
+    std::string string_stream = readToStr();
+    writeDataToOutput(string_stream);
     // std::cout << a << std::endl;
 }
 
@@ -29,24 +37,23 @@ void BitWriter::writeDataToOutput(const std::string & data)
 {
     int tail = 2;
     std::string string_to_write;
+    int j = 0;
     for (auto &&i : data)
     {
+        std::cout << j++ << " ";
         tail = tail * 10 + (i - 48);
-        // std::cout << string_to_write.size() << "--" << data.size();
         if(_codes[tail])
         {
-            // std::cout << _codes[tail] << std::endl;
-            string_to_write.push_back(_codes[tail]);
+            std::cout << _codes[tail];
+            _out_file_uz << _codes[tail];        
             tail = 2;
         }
     }
-
-    _out_file_uz << string_to_write;
 }
 
 void BitWriter::generateOutputFile()
 {
-    _out_file_uz.open(_file_data._file_name, std::ios::out | std::ios::app);
+    _out_file_uz.open(_file_data._file_name, std::ios::out | std::ios::binary | std::ios::trunc);
     if (!_out_file_uz.is_open())
         throw std::runtime_error("Cant create file from .zipo file.");
 }
@@ -77,11 +84,7 @@ std::string BitWriter::readToStr()
 
     _in_file_uz.close();
 
-    std::ostringstream string_stream;
-    for (unsigned char byte : buffer) {
-        string_stream << std::bitset<8>(byte);
-    }
-    return string_stream.str();
+    return binaryToString(buffer);
 }
 
 BitWriter::~BitWriter()

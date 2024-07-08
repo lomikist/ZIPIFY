@@ -87,8 +87,8 @@ int main(int argc, char ** argv) {
     {
         if (argc == 1)
         { 
-            Zipify zip("image.png", "out.zipo");        
-            // Zipify zip("test.txt", "out.zipo");        
+            // Zipify zip("image.png", "out.zipo");
+            Zipify zip("test.txt", "out.zipo");
             zip.readCharFreq();
             zip.generateTree();
             zip.generateCode(zip._huff_tree.top(), 2);
