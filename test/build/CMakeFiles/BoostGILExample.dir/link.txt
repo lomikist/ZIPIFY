@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/BoostGILExample.dir/main.cpp.o -o BoostGILExample  /usr/lib/x86_64-linux-gnu/libpng.so /usr/lib/x86_64-linux-gnu/libz.so 
