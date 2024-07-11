@@ -1,3 +1,0 @@
-/home/weasle/repos/ZIPIFY/test/build/CMakeFiles/BoostGILExample.dir
-/home/weasle/repos/ZIPIFY/test/build/CMakeFiles/edit_cache.dir
-/home/weasle/repos/ZIPIFY/test/build/CMakeFiles/rebuild_cache.dir
