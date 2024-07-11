@@ -1,5 +1,4 @@
 #include "../inc/all_inc.hpp"
-#include "bitWriter.hpp"
 
 BitWriter::BitWriter(const std::string& out_file_name, const std::unordered_map<char, int>& codes, const std::string& in_file_name) :
                     _bit_count(0),
@@ -12,79 +11,11 @@ BitWriter::BitWriter(const std::string& out_file_name, const std::unordered_map<
         throw std::runtime_error("can't open output file for creating a zip.");
     nameCodeWrite();
 }
-std::string binaryToString(const std::vector<uint8_t>& data) {
-    std::string result;
-    for (uint8_t byte : data) {
-        std::bitset<8> bits(byte);
-        result += bits.to_string();
-    }
-    return result;
-}
-
-BitWriter::BitWriter(const std::string &in_file_name)
-{
-    _in_file_uz.open(in_file_name, std::ios::in | std::ios::binary);
-    if (!_in_file_uz.is_open())
-        throw std::runtime_error("can't open output file for creating a zip.");
-    nameCodeRead();
-    generateOutputFile();
-    std::string string_stream = readToStr();
-    writeDataToOutput(string_stream);
-    // std::cout << a << std::endl;
-}
-
-void BitWriter::writeDataToOutput(const std::string & data) 
-{
-    int tail = 2;
-    std::string string_to_write;
-    int j = 0;
-    for (auto &&i : data)
-    {
-        std::cout << j++ << " ";
-        tail = tail * 10 + (i - 48);
-        if(_codes[tail])
-        {
-            std::cout << _codes[tail];
-            _out_file_uz << _codes[tail];        
-            tail = 2;
-        }
-    }
-}
-
-void BitWriter::generateOutputFile()
-{
-    _out_file_uz.open(_file_data._file_name, std::ios::out | std::ios::binary | std::ios::trunc);
-    if (!_out_file_uz.is_open())
-        throw std::runtime_error("Cant create file from .zipo file.");
-}
 
 void BitWriter::nameCodeWrite()
 {
     boost::archive::binary_oarchive arcive_output(_out_file_z);
     arcive_output << _file_data;
-}
-
-void BitWriter::nameCodeRead()
-{
-    boost::archive::binary_iarchive archive_input(_in_file_uz);
-    archive_input >> _file_data;
-    
-    for (auto &&i : _file_data._codes)
-    {
-        _codes[i.second] = i.first;
-    }
-}
-
-std::string BitWriter::readToStr()
-{
-    if (!_in_file_uz)
-        throw std::runtime_error("Unable to open file");
-
-    std::vector<uint8_t> buffer((std::istreambuf_iterator<char>(_in_file_uz)), std::istreambuf_iterator<char>());
-
-    _in_file_uz.close();
-
-    return binaryToString(buffer);
 }
 
 BitWriter::~BitWriter()

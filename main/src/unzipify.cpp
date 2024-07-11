@@ -16,5 +16,5 @@ Unzipify::~Unzipify()
 
 void Unzipify::readNameData()
 {
-    BitWriter data_reader(_in_file_name);
+    BitReader data_reader(_in_file_name);
 }

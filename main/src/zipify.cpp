@@ -25,27 +25,25 @@ void Zipify::generateTree()
 
 void Zipify::generateCode(const node& t_node, int path)
 {
-    if (_codes.size())
-    {
-        if(t_node._left)
+    // if (_codes.size())
+    // {
+        if (t_node._left)
             generateCode(*t_node._left, path * 10);
-        else
-            _codes[t_node._value] = path;
-        if(t_node._right)
-            generateCode(*t_node._right, path * 10 + 1);
-        else
-            _codes[t_node._value] = path;
-    }else                                    //TODO please check this..... now i think its working but it pretty shit.
-    {
-        if(t_node._left)
-            generateCode(*t_node._left, path * 10);
-        else
-            _codes[t_node._value] = path;
-        if(t_node._right)
-            generateCode(*t_node._right, path * 10 + 1);
-        else
-            _codes[t_node._value] = path;
-    }
+        if (t_node._right)
+            generateCode(*t_node._right, path * 10 + 1);    
+        if (!t_node._left && !t_node._right)
+            _codes[t_node._value] = path;//TODO check this out
+    // }else
+    // {
+    //     if(t_node._left)
+    //         generateCode(*t_node._left, path * 10);
+    //     else
+    //         _codes[t_node._value] = path;
+    //     if(t_node._right)
+    //         generateCode(*t_node._right, path * 10 + 1);
+    //     else
+    //         _codes[t_node._value] = path;
+    // }
 }
 
 void Zipify::createBinaryFile()
@@ -60,9 +58,7 @@ void Zipify::createBinaryFile()
     //write file data
     char letter;
     while (_in_file.get(letter))
-    {
         data_writer.add(_codes[letter]);
-    }
 
     _in_file.close();
 }

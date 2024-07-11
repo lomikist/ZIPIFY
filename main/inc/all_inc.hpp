@@ -1,6 +1,7 @@
 #ifndef ALL_INC_HPP
 #define ALL_INC_HPP
 
+#include <string.h>
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/binary_iarchive.hpp>
 #include <boost/serialization/serialization.hpp>
@@ -56,6 +57,7 @@ using Huffman_queue = std::priority_queue<node, std::vector<node>, compare>;
 
 #include "fileData.hpp"
 #include "bitWriter.hpp"
+#include "bitReader.hpp"
 #include "zipify.hpp"
 #include "unzipify.hpp"
 

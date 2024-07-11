@@ -15,6 +15,7 @@ set(SOURCES
     src/main.cpp
     src/unzipify.cpp
     src/zipify.cpp
+    src/bitReader.cpp
 )
 
 # Add the Boost library
