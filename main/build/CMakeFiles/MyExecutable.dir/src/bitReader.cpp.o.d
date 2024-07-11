@@ -1,5 +1,6 @@
-CMakeFiles/MyExecutable.dir/src/zipify.cpp.o: \
- /home/weasle/repos/ZIPIFY/main/src/zipify.cpp /usr/include/stdc-predef.h \
+CMakeFiles/MyExecutable.dir/src/bitReader.cpp.o: \
+ /home/weasle/repos/ZIPIFY/main/src/bitReader.cpp \
+ /usr/include/stdc-predef.h \
  /home/weasle/repos/ZIPIFY/main/src/../inc/all_inc.hpp \
  /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \

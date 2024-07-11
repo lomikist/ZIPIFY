@@ -2,11 +2,8 @@ CMakeFiles/MyExecutable.dir/src/bitWriter.cpp.o: \
  /home/weasle/repos/ZIPIFY/main/src/bitWriter.cpp \
  /usr/include/stdc-predef.h \
  /home/weasle/repos/ZIPIFY/main/src/../inc/all_inc.hpp \
- /usr/include/boost/archive/binary_oarchive.hpp \
- /usr/include/c++/11/ostream /usr/include/c++/11/ios \
- /usr/include/c++/11/iosfwd \
- /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
+ /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/timesize.h \
@@ -14,14 +11,20 @@ CMakeFiles/MyExecutable.dir/src/bitWriter.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/strings.h /usr/include/boost/archive/binary_oarchive.hpp \
+ /usr/include/c++/11/ostream /usr/include/c++/11/ios \
+ /usr/include/c++/11/iosfwd \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
  /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/memoryfwd.h /usr/include/c++/11/bits/postypes.h \
  /usr/include/c++/11/cwchar /usr/include/wchar.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
@@ -29,8 +32,6 @@ CMakeFiles/MyExecutable.dir/src/bitWriter.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/11/exception /usr/include/c++/11/bits/exception.h \
  /usr/include/c++/11/bits/exception_ptr.h \
  /usr/include/c++/11/bits/exception_defines.h \
@@ -439,7 +440,6 @@ CMakeFiles/MyExecutable.dir/src/bitWriter.cpp.o: \
  /usr/include/boost/archive/detail/common_oarchive.hpp \
  /usr/include/boost/archive/detail/basic_oarchive.hpp \
  /usr/include/boost/archive/basic_archive.hpp /usr/include/c++/11/cstring \
- /usr/include/string.h /usr/include/strings.h \
  /usr/include/boost/serialization/library_version_type.hpp \
  /usr/include/boost/archive/detail/helper_collection.hpp \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_vector.h \
@@ -585,6 +585,7 @@ CMakeFiles/MyExecutable.dir/src/bitWriter.cpp.o: \
  /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/stdlib.h \
  /home/weasle/repos/ZIPIFY/main/src/../inc/fileData.hpp \
  /home/weasle/repos/ZIPIFY/main/src/../inc/bitWriter.hpp \
+ /home/weasle/repos/ZIPIFY/main/src/../inc/bitReader.hpp \
+ /home/weasle/repos/ZIPIFY/main/src/../inc/all_inc.hpp \
  /home/weasle/repos/ZIPIFY/main/src/../inc/zipify.hpp \
- /home/weasle/repos/ZIPIFY/main/src/../inc/unzipify.hpp \
- /home/weasle/repos/ZIPIFY/main/inc/bitWriter.hpp
+ /home/weasle/repos/ZIPIFY/main/src/../inc/unzipify.hpp

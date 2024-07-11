@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/weasle/repos/ZIPIFY/main/src/bitReader.cpp" "CMakeFiles/MyExecutable.dir/src/bitReader.cpp.o" "gcc" "CMakeFiles/MyExecutable.dir/src/bitReader.cpp.o.d"
   "/home/weasle/repos/ZIPIFY/main/src/bitWriter.cpp" "CMakeFiles/MyExecutable.dir/src/bitWriter.cpp.o" "gcc" "CMakeFiles/MyExecutable.dir/src/bitWriter.cpp.o.d"
   "/home/weasle/repos/ZIPIFY/main/src/fileData.cpp" "CMakeFiles/MyExecutable.dir/src/fileData.cpp.o" "gcc" "CMakeFiles/MyExecutable.dir/src/fileData.cpp.o.d"
   "/home/weasle/repos/ZIPIFY/main/src/main.cpp" "CMakeFiles/MyExecutable.dir/src/main.cpp.o" "gcc" "CMakeFiles/MyExecutable.dir/src/main.cpp.o.d"

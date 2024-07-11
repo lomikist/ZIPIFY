@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/MyExecutable.dir/src/bitReader.cpp.o"
+  "CMakeFiles/MyExecutable.dir/src/bitReader.cpp.o.d"
   "CMakeFiles/MyExecutable.dir/src/bitWriter.cpp.o"
   "CMakeFiles/MyExecutable.dir/src/bitWriter.cpp.o.d"
   "CMakeFiles/MyExecutable.dir/src/fileData.cpp.o"

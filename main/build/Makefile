@@ -155,6 +155,30 @@ release/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/release.dir/build.make CMakeFiles/release.dir/build
 .PHONY : release/fast
 
+src/bitReader.o: src/bitReader.cpp.o
+.PHONY : src/bitReader.o
+
+# target to build an object file
+src/bitReader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/bitReader.cpp.o
+.PHONY : src/bitReader.cpp.o
+
+src/bitReader.i: src/bitReader.cpp.i
+.PHONY : src/bitReader.i
+
+# target to preprocess a source file
+src/bitReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/bitReader.cpp.i
+.PHONY : src/bitReader.cpp.i
+
+src/bitReader.s: src/bitReader.cpp.s
+.PHONY : src/bitReader.s
+
+# target to generate assembly for a file
+src/bitReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/bitReader.cpp.s
+.PHONY : src/bitReader.cpp.s
+
 src/bitWriter.o: src/bitWriter.cpp.o
 .PHONY : src/bitWriter.o
 
@@ -286,6 +310,9 @@ help:
 	@echo "... debug"
 	@echo "... release"
 	@echo "... MyExecutable"
+	@echo "... src/bitReader.o"
+	@echo "... src/bitReader.i"
+	@echo "... src/bitReader.s"
 	@echo "... src/bitWriter.o"
 	@echo "... src/bitWriter.i"
 	@echo "... src/bitWriter.s"
