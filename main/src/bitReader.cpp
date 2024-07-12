@@ -53,16 +53,14 @@ std::string BitReader::readToStr()
 
 void BitReader::writeDataToOutput(const std::string & data) 
 {
-    int tail = 2;
+    long long tail = 2;
     std::string string_to_write;
-    int j = 0;
+    long long j = 0;
     for (auto &&i : data)
     {
-        std::cout << j++ << " ";
         tail = tail * 10 + (i - 48);
-        if(_codes[tail])
+        if(_codes.find(tail) != _codes.end())
         {
-            std::cout << _codes[tail];
             _out_file_uz << _codes[tail];        
             tail = 2;
         }

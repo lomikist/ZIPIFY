@@ -4,7 +4,7 @@
 struct Unzipify
 {
 public:
-    std::unordered_map<int, char>   _codes; // codes like ("2001" - > "k") "2" is required
+    R_codes   _codes; // codes like ("2001" - > "k") "2" is required
     std::string                             _in_file_name;
     std::string                             _out_file_name;
 

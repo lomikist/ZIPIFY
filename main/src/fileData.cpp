@@ -1,6 +1,6 @@
 #include "../inc/all_inc.hpp"
 
-FileData::FileData(const std::unordered_map<char, int>& codes, const std::string& file_name)
+FileData::FileData(const Codes& codes, const std::string& file_name)
 {
     _file_name = file_name;
     _codes = codes;

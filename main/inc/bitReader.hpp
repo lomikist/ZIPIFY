@@ -13,7 +13,7 @@ public:
     void writeDataToOutput(const std::string & data);
     std::string  readToStr();
 private:
-    std::unordered_map<int, char>   _codes;
+    R_codes  _codes;
     FileData                        _file_data;
     std::fstream                    _out_file_uz;
     std::fstream                    _in_file_uz;

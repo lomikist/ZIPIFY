@@ -23,32 +23,18 @@ void Zipify::generateTree()
     }
 }
 
-void Zipify::generateCode(const node& t_node, int path)
+void Zipify::generateCode(const node& t_node, long long path)
 {
-    // if (_codes.size())
-    // {
-        if (t_node._left)
-            generateCode(*t_node._left, path * 10);
-        if (t_node._right)
-            generateCode(*t_node._right, path * 10 + 1);    
-        if (!t_node._left && !t_node._right)
-            _codes[t_node._value] = path;//TODO check this out
-    // }else
-    // {
-    //     if(t_node._left)
-    //         generateCode(*t_node._left, path * 10);
-    //     else
-    //         _codes[t_node._value] = path;
-    //     if(t_node._right)
-    //         generateCode(*t_node._right, path * 10 + 1);
-    //     else
-    //         _codes[t_node._value] = path;
-    // }
+    if (t_node._left)
+        generateCode(*t_node._left, path * 10);
+    if (t_node._right)
+        generateCode(*t_node._right, path * 10 + 1);    
+    if (!t_node._left && !t_node._right)
+        _codes[t_node._value] = path;
 }
 
 void Zipify::createBinaryFile()
 {
-    // FileData file_data(_codes, _in_file_name);//for writing one obj instead of 2.
     BitWriter data_writer(_out_file_name, _codes, _in_file_name);
     
     _in_file.open(_in_file_name, std::ios::in | std::ios::binary);

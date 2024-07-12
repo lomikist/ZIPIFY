@@ -1,8 +1,6 @@
 #include "../inc/all_inc.hpp"
 
-using std::fstream;
-using std::unordered_map;
-using std::priority_queue;
+
 
 bool checkExtenshion(char *file_name, char *extenshion)
 {

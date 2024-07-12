@@ -3,9 +3,9 @@
 
 struct FileData
 {
-    std::unordered_map<char, int>           _codes; // codes like ("k" - > "2001") 2 is required
-    std::string                             _file_name;
-    int                                     _last_byte_bit_count;
+    Codes       _codes; // codes like ("k" - > "2001") 2 is required
+    std::string _file_name;
+    int         _last_byte_bit_count;
     
     friend class boost::serialization::access;
 
@@ -16,7 +16,7 @@ struct FileData
         ar & _codes;
     }
     
-    FileData(const std::unordered_map<char, int>& codes, const std::string& file_name);
+    FileData(const Codes& codes, const std::string& file_name);
     FileData(const FileData& other);
     FileData(){};
 };

@@ -1,6 +1,6 @@
 #include "../inc/all_inc.hpp"
 
-BitWriter::BitWriter(const std::string& out_file_name, const std::unordered_map<char, int>& codes, const std::string& in_file_name) :
+BitWriter::BitWriter(const std::string& out_file_name, const Codes& codes, const std::string& in_file_name) :
                     _bit_count(0),
                     _bytes(0),
                     _file_data(codes, in_file_name)
@@ -24,13 +24,13 @@ BitWriter::~BitWriter()
     _out_file_z.close();
 }
 
-void BitWriter::add(int bits)
+void BitWriter::add(long long bits)
 {
-    int num = 0;
-    int reversedNum = 2;
+    long long num = 0;
+    long long reversedNum = 2;
     // reverse a number. for reading backward.
     while (bits != 2) {
-        int digit = bits % 10;
+        long long digit = bits % 10;
         reversedNum = reversedNum * 10 + digit;
         bits /= 10;
     }

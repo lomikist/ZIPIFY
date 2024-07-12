@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/MyExecutable.dir/src/bitWriter.cpp.o CMakeFiles/MyExecutable.dir/src/fileData.cpp.o CMakeFiles/MyExecutable.dir/src/main.cpp.o CMakeFiles/MyExecutable.dir/src/unzipify.cpp.o CMakeFiles/MyExecutable.dir/src/zipify.cpp.o CMakeFiles/MyExecutable.dir/src/bitReader.cpp.o -o MyExecutable  /usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.74.0 

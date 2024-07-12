@@ -37,15 +37,12 @@ struct compare {
         return false;
     }
 };
-#include <iostream>
+
+
+
 #include <unordered_map>
-#include <fstream>
 #include <queue>
-#include <unordered_map>
-#include <iostream>
-#include <unordered_map>
 #include <exception>
-#include <queue>
 #include <vector>
 #include <string>
 #include <iostream>
@@ -54,6 +51,13 @@ struct compare {
 #include <sstream>
 #include <stdlib.h>     
 using Huffman_queue = std::priority_queue<node, std::vector<node>, compare>;
+
+using std::fstream;
+using std::unordered_map;
+using std::priority_queue;
+
+using Codes = std::unordered_map<char, unsigned long long>;
+using R_codes = std::unordered_map<unsigned long long, char>;
 
 #include "fileData.hpp"
 #include "bitWriter.hpp"
