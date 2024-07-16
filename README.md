@@ -33,7 +33,10 @@ Follow these steps to build and run the project:
     ```bash
     ./MyExecutable <some.file>
     ```
-
+6. To process a .zipo file and extract its contents, use the following command:
+    ```bash
+    ./MyExecutable <out.zipo>
+    ```
 Replace `<some.file>` with the actual file you want to process.
 
 ## Notes
