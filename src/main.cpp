@@ -1,7 +1,5 @@
 #include "../inc/all_inc.hpp"
 
-
-
 bool checkExtenshion(char *file_name, char *extenshion)
 {
     int file_len = strlen(file_name);

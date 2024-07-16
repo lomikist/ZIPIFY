@@ -16,7 +16,7 @@ struct FileData
         ar & _codes;
     }
     
-    FileData(const Codes& codes, const std::string& file_name);
+    FileData(const Codes& codes, const std::string& file_name, const int last_bit_count);
     FileData(const FileData& other);
     FileData(){};
 };

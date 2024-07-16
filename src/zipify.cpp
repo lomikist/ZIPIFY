@@ -1,4 +1,5 @@
 #include "../inc/all_inc.hpp"
+#include "zipify.hpp"
 
 void Zipify::readCharFreq()
 {
@@ -33,9 +34,20 @@ void Zipify::generateCode(const node& t_node, long long path)
         _codes[t_node._value] = path;
 }
 
+int Zipify::countLastBit()
+{
+    int count = 0;
+    for (auto &&i : _char_freq)
+    {
+        count += i.second * (std::to_string(_codes[i.first]).size() - 1);
+    }
+    return count % 8;
+}
+
 void Zipify::createBinaryFile()
 {
-    BitWriter data_writer(_out_file_name, _codes, _in_file_name);
+    int last_bit_count = countLastBit();
+    BitWriter data_writer(_out_file_name, _codes, _in_file_name, last_bit_count);
     
     _in_file.open(_in_file_name, std::ios::in | std::ios::binary);
     if (!_in_file.is_open())

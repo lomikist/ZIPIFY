@@ -1,4 +1,5 @@
 #include "../inc/all_inc.hpp"
+#include "bitReader.hpp"
 
 BitReader::BitReader(const std::string &in_file_name)
 {
@@ -30,12 +31,13 @@ void BitReader::nameCodeRead()
     }
 }
 
-std::string binaryToString(const std::vector<uint8_t>& data) {
+std::string BitReader::binaryToString(const std::vector<uint8_t>& data) {
     std::string result;
     for (uint8_t byte : data) {
         std::bitset<8> bits(byte);
         result += bits.to_string();
     }
+    result.erase(result.size() - (8 - _file_data._last_byte_bit_count));
     return result;
 }
 

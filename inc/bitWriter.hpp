@@ -4,7 +4,10 @@
 struct BitWriter
 {
 public:
-    BitWriter(const std::string& out_file_name, const Codes& codes, const std::string& in_file_name);//For zipify
+    BitWriter(  const std::string& out_file_name,
+                const Codes& codes,
+                const std::string& in_file_name,
+                const int last_bit_count  );//For zipify
     ~BitWriter();
     void fillRest();
     void add(long long bits);

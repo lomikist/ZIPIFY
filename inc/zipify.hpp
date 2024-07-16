@@ -16,6 +16,7 @@ public:
     void readCharFreq();
     void generateTree();
     void generateCode(const node& t_node, long long path);
+    int countLastBit();
     void createBinaryFile();
 
     Zipify(const std::string &in_file_name, const std::string &out_file_name);

@@ -1,9 +1,12 @@
 #include "../inc/all_inc.hpp"
 
-BitWriter::BitWriter(const std::string& out_file_name, const Codes& codes, const std::string& in_file_name) :
+BitWriter::BitWriter(   const std::string& out_file_name, 
+                        const Codes& codes,
+                        const std::string& in_file_name,
+                        const int last_bit_count) :
                     _bit_count(0),
                     _bytes(0),
-                    _file_data(codes, in_file_name)
+                    _file_data(codes, in_file_name, last_bit_count)
 {
 
     _out_file_z.open(out_file_name, std::ios::out | std::ios::binary | std::ios::app);
@@ -34,7 +37,6 @@ void BitWriter::add(long long bits)
         reversedNum = reversedNum * 10 + digit;
         bits /= 10;
     }
-
     //reading backward.
     while (reversedNum != 2)
     {

@@ -9,6 +9,7 @@ public:
     BitReader(const std::string& in_file_name);
     // For unzipify
     void nameCodeRead();
+    std::string binaryToString(const std::vector<uint8_t> &data);
     void generateOutputFile();
     void writeDataToOutput(const std::string & data);
     std::string  readToStr();
