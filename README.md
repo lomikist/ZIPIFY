@@ -1,5 +1,7 @@
 # ZIPIFY
 
+
+
 To properly work with this project, ensure you have the following installed on your device:
 
 - Boost
